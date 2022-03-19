@@ -1,0 +1,72 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: antiquewhite;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.grid {
+    display: grid;
+    width: 600px;
+    height: 600px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr)
+}
+
+#G0, #G3, #G1, #G4 {
+    border-bottom: 2px solid black;
+    border-right: 2px solid black
+}
+
+#G6, #G7 {
+    border-right: 2px solid black;
+}
+
+#G2, #G5 {
+    border-bottom: 2px solid black;
+}
+
+.grid button {
+    content: '';
+    position: relative;
+    width: 180px;
+    height: 180px;
+    top: 9px;
+    left: 9px;
+}
+
+#new button {
+    background-color: #fbeee0;
+    border: 2px solid #422800;
+    border-radius: 30px;
+    color: #422800;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0 18px;
+    line-height: 50px;
+    text-align: center;
+}
+
+
+h2,h3,h4 {
+    display: none
+}
+
+h2.winnerX, h3.winnerO, h4.tie {
+    animation: blinker 1s linear infinite;
+    display: inline-block;
+    color: red;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0 18px;
+}
+
+@keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
